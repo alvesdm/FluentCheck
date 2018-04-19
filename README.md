@@ -1,4 +1,4 @@
-# RabbitHole
+# FluentCheck
 A HealthCheck wrapper for .net core
 
 
@@ -51,6 +51,8 @@ How to use it?
         }
     }
 ```
+
+...and of course you can create your own checking stuff.
 
 # License
 
