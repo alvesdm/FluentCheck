@@ -12,6 +12,7 @@
     <RepositoryUrl>https://github.com/alvesdm/FluentCheck</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>.netcore healthcheck</PackageTags>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
