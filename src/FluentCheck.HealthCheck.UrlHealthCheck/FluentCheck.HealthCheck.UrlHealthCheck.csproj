@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>alvesdm.FluentCheck.UrlHealthCheck</PackageId>
+    <Authors>Demetrio Alves</Authors>
+    <Product>FluentCheck.UrlHealthCheck</Product>
+    <Description>A URL HealthCheck wrapper for .net core</Description>
+    <PackageLicenseUrl>https://github.com/alvesdm/FluentCheck/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/alvesdm/FluentCheck</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/alvesdm/FluentCheck</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags>.netcore healthcheck</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

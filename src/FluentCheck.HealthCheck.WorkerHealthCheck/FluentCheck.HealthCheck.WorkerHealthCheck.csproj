@@ -3,10 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>alvesdm.FluentCheck.RabbitMQHealthCheck</PackageId>
+    <PackageId>alvesdm.FluentCheck.WorkerHealthCheck</PackageId>
     <Authors>Demetrio Alves</Authors>
-    <Product>FluentCheck.RabbitMQHealthCheck</Product>
-    <Description>A RabbitMQ HealthCheck wrapper for .net core</Description>
+    <Product>FluentCheck.WorkerHealthCheck</Product>
+    <Description>A Worker Pingback HealthCheck wrapper for .net core</Description>
     <PackageLicenseUrl>https://github.com/alvesdm/FluentCheck/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/alvesdm/FluentCheck</PackageProjectUrl>
     <RepositoryUrl>https://github.com/alvesdm/FluentCheck</RepositoryUrl>
@@ -15,7 +15,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FluentCheck.HealthCheck\FluentCheck.HealthCheck.csproj" />
   </ItemGroup>
 
 </Project>
+
+

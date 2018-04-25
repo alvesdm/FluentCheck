@@ -29,7 +29,7 @@ namespace FluentCheck.HealthCheck
 
         public IHealthCheckConfiguration WithEndpoint(string uri)
         {
-            Endpoint = uri;
+            Endpoint = $"/{uri}".Replace("//", "/");
             return this;
         }
     }

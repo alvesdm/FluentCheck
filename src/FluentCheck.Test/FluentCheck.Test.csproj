@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\FluentCheck.HealthCheck.RabbitMQHealthCheck\FluentCheck.HealthCheck.RabbitMQHealthCheck.csproj" />
     <ProjectReference Include="..\FluentCheck.HealthCheck.UrlHealthCheck\FluentCheck.HealthCheck.UrlHealthCheck.csproj" />
+    <ProjectReference Include="..\FluentCheck.HealthCheck.WorkerHealthCheck\FluentCheck.HealthCheck.WorkerHealthCheck.csproj" />
     <ProjectReference Include="..\FluentCheck.HealthCheck\FluentCheck.HealthCheck.csproj" />
   </ItemGroup>
 

@@ -51,6 +51,25 @@ namespace FluentCheck.HealthCheck
                     });
                 });
 
+            c.HealthChecks
+                .OfType<IRegisterRequest>()
+                .ToList()
+                .ForEach(hc =>
+                {
+                    app.MapWhen(
+                        context => context.Request.Path.Value.EndsWith($"{c.Endpoint}{hc.Url}"),
+                        builder =>
+                        {
+                            builder.Run(async httpContext =>
+                            {
+                                hc.Response(httpContext);
+
+                                await httpContext.Response.WriteAsync("OK");
+                            });
+                        }
+                    );
+                });
+
             return app;
         }
     }

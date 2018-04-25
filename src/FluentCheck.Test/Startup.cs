@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FluentCheck.HealthCheck;
 using FluentCheck.HealthCheck.RabbitMQHealthCheck;
 using FluentCheck.HealthCheck.UrlHealthCheck;
+using FluentCheck.HealthCheck.WorkerHealthCheck;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -28,7 +29,8 @@ namespace FluentCheck.Test
         {
             services.AddTransient<IRabbitMQHealthCheck, RabbitMQHealthCheck>();
             services.AddTransient<IUrlHealthCheck, UrlHealthCheck>();
-            services.AddHealthCheck();
+            services.AddTransient<IWorkerHealthCheck, WorkerHealthCheck>();
+            services.AddHealthCheck(); //see Program.cs
 
             services.AddMvc();
         }
@@ -45,8 +47,9 @@ namespace FluentCheck.Test
                 serviceProvider,
                 config =>
                     config
-                        .Register<IRabbitMQHealthCheck>("RabbitMQ", hc => hc.WithCredentials("guestt", "guest"))
-                        .Register<IUrlHealthCheck>("Google", hc => hc.WithAddress("http://google.comm"))
+                        .Register<IRabbitMQHealthCheck>("RabbitMQ", hc => hc.WithCredentials("guest", "guest"))
+                        .Register<IUrlHealthCheck>("Google", hc => hc.WithAddress("http://google.com"))
+                        .Register<IWorkerHealthCheck>("Worker", hc => hc.WithPingAddress("myworker/ping"))
                         .WithEndpoint("/healthcheck")
             );
 

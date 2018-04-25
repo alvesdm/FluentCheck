@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>alvesdm.FluentCheck</PackageId>
+    <Authors>Demetrio Alves</Authors>
+    <Product>FluentCheck.HealthCheck</Product>
+    <Description>A HealthCheck wrapper for .net core</Description>
+    <PackageLicenseUrl>https://github.com/alvesdm/FluentCheck/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/alvesdm/FluentCheck</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/alvesdm/FluentCheck</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags>.netcore healthcheck</PackageTags>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,5 +25,4 @@
       <HintPath>..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.http.abstractions\2.0.1\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
     </Reference>
   </ItemGroup>
-
 </Project>
