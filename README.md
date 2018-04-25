@@ -25,7 +25,7 @@ How to use it?
         {
             services.AddTransient<IRabbitMQHealthCheck, RabbitMQHealthCheck>();
             services.AddTransient<IUrlHealthCheck, UrlHealthCheck>();
-			services.AddTransient<IWorkerHealthCheck, WorkerHealthCheck>();
+            services.AddTransient<IWorkerHealthCheck, WorkerHealthCheck>();
             services.AddHealthCheck();
 
             services.AddMvc();
@@ -45,7 +45,7 @@ How to use it?
                     config
                         .Register<IRabbitMQHealthCheck>("RabbitMQ", hc => hc.WithCredentials("guest", "guest"))
                         .Register<IUrlHealthCheck>("Google", hc => hc.WithAddress("http://google.com"))
-						.Register<IWorkerHealthCheck>("Worker", hc => hc.WithPingAddress("myworker/ping"))
+                        .Register<IWorkerHealthCheck>("Worker", hc => hc.WithPingAddress("myworker/ping"))
                         .WithEndpoint("/healthcheck")
             );
 
